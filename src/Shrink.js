@@ -16,7 +16,7 @@ export default class Shrink extends React.Component {
     }
 
     onScroll = ( ev ) => {
-        this.setState(prev => ({
+        this.setState( prev => ({
             styles: {
                 ...prev.styles,
                 width: "calc(100vw - " + window.scrollY / 10 + "vw)"
@@ -29,11 +29,11 @@ export default class Shrink extends React.Component {
         return ( 
             <div>
                 { 
-                    this.state.colors.map( c => {
+                    this.state.colors.map( color => {
                         return <div 
-                                    key={ c }  
-                                    className={ c  + " big-block" }
-                                    style={ c === 'red' ?  {...this.state.styles} : null }
+                                    key={ color }  
+                                    className={ color  + " big-block" }
+                                    style={ color === 'red' ?  {...this.state.styles} : null }
                                 >
                                 </div>
                     })
